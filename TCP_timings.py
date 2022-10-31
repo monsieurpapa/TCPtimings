@@ -1,3 +1,13 @@
+'''Author : Dieudonne MUNGANGA
+Email : dieudonneishara@gmail.com 
+
+ABout the script :
+This script measures TCP timings of a list of websites . The websites used are the mostly accessed webisites in DRC according to Open .Trends : https://www.semrush.com/trending-websites/cd/all
+
+This is a step towards measuring users' Web Quality of Experience.
+'''
+
+
 import pycurl, time
 c = pycurl.Curl()
 import pandas as pd
