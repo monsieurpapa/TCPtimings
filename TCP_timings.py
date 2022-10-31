@@ -69,12 +69,18 @@ if __name__ == "__main__":
             'vostfree.cx', 'evolve-rdc.com','aliexpress.com','frenchstream.site','facebook.com','voiranime.com','wikipedia.org',
 'matchendirect.fr','premierbet.cd','premierbet.com','theguardian.com',
 'torrent9.to', '1377x.is']
-    DRC_locally = ['google.cd','radiookapi.net','politico.cd','7sur7.cd','senat.cd','presidence.cd']
+    DRC_locally = ['google.cd','radiookapi.net','politico.cd','7sur7.cd','senat.cd','presidence.cd','senat.cd','facebook.com', 'twitter.com', 'youtube.com']
     results = []
+    local_results =[]
     today = datetime.today()
     for site in DRC_globally:
         results.append(tcp_timings(site))
     print('Done')
     global_data =pd.DataFrame(results)
     global_data.to_csv(f'{today}_globaldata.csv')
+
+    for site in DRC_locally:
+        local_results.append(tcp_timings(site))
+    local_data = pd.DataFrame(local_results)
+    local_data.to_csv(f'{today}_localdata.csv')
 
