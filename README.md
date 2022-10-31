@@ -18,13 +18,13 @@ A python script that measures TCP timings to infer user's Web QoE .
 
 1. Install the requirements by executing the command below :
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 2. Execute the script with :
 
-python TCP_timings.py
+```python TCP_timings.py```
 
 
-Two files "date_globaladata.csv"  and "date_localdata.csv" will be created in a minute or so . 
+Two files ```$(date)_globaladata.csv``  and ``$(date)_localdata.csv``` will be created in a minute or so . 
 
-Please send the two files to  : dieudonneishara@gmail.com
+Please send us the two files on this email : dieudonneishara@gmail.com
