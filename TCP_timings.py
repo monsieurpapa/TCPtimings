@@ -74,13 +74,15 @@ if __name__ == "__main__":
     local_results =[]
     today = datetime.today()
     for site in DRC_globally:
+        print('doing :' + site)
         results.append(tcp_timings(site))
     print('Done')
     global_data =pd.DataFrame(results)
-    global_data.to_csv(f'{today}_globaldata.csv')
+    global_data.to_csv(str(today) + '_globaldata.csv')
 
     for site in DRC_locally:
+        print('doing :' + site)
         local_results.append(tcp_timings(site))
     local_data = pd.DataFrame(local_results)
-    local_data.to_csv(f'{today}_localdata.csv')
+    local_data.to_csv(str(today) + '_localdata.csv'.format(today))
 
