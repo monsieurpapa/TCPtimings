@@ -15,7 +15,7 @@ from datetime import datetime
 import certifi
 #website='https://technixmw.com'
 #c.setopt(c.VERBOSE, False) # to see request details
-ts = time.process_time()
+#ts = time.process_time()
 def tcp_timings(website):
     website = 'https://www.{0}'.format(website)
     c.setopt(pycurl.WRITEFUNCTION, lambda x: None) ##hide data
